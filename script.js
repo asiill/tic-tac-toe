@@ -9,7 +9,23 @@ const player = (sign) => {
 };
 
 const gameBoard = (() => {
+    const board = ["", "", "", "", "", "", "", "", ""];
 
+    const getSign = (index) => {
+        return board[index];
+    };
+
+    const setSign = (index, sign) => {
+        board[index] = sign;
+    };
+
+    const resetBoard = () => {
+        for (let i = 0; i < board.length; i++) {
+            board[i] = "";
+        }
+    };
+
+    return {getSign, setSign, resetBoard};
 })();
 
 const gameController = (() => {
