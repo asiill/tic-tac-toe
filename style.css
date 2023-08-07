@@ -50,12 +50,14 @@ button.cell {
     font-size: 12px;
     font-weight: bold;
     color: #FFFFFF;
-    background-color: #0e6c7a;
+    background-color: #3369ff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    position: relative;
 }
 
 #reset-btn:hover {
-    background-color: #3DD1E7;
+    top: 0.1em;
+    background-color: #86a3f3;
 }
