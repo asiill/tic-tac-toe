@@ -54,10 +54,12 @@ button.cell {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
     position: relative;
+    transition: top 0.2s;
 }
 
 #reset-btn:hover {
-    top: 0.1em;
+    top: -0.1em;
     background-color: #86a3f3;
 }
