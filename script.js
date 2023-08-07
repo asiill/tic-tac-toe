@@ -57,13 +57,11 @@ const gameController = (() => {
         if (checkForWinner() === true) {
             gameOver = true;
             screenController.setGameResult(winner);
-            resetGame();
 
         } else if (round === 8) {
             gameOver = true;
             winner = "tie";
             screenController.setGameResult(winner);
-            resetGame();
         } else {
             switchCurrentPlayer();
             screenController.setCurrentPlayer(currentPlayer);
@@ -125,7 +123,7 @@ const screenController = (() => {
     }
 
     screenCells.forEach(cell => cell.addEventListener("click", (e) => {
-        if (e.target.textContent !== "") return;
+        if (e.target.textContent !== "" || gameController.isGameOver()) return;
         gameController.playRound(parseInt(e.target.id));
         updateScreen();
     }));
