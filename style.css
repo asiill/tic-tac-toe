@@ -18,12 +18,30 @@ body {
 }
 
 .cell {
-    width: auto;
-    height: auto;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+button.cell {
+    background-color: #FFFFFF;
+}
+
+.top {
+    border-top: none;
+}
+
+.bottom {
+    border-bottom: none;
+}
+
+.left {
+    border-left: none;
+}
+
+.right {
+    border-right: none;
 }
 
 #reset-btn {
